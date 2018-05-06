@@ -392,7 +392,7 @@
     <div id="form-account-login" class="form-account-login white-popup mfp-hide">
       <div class="form-account__content">
           <h2 class="form-account__title">Login account</h2>
-          <form action="#" class="form login-form" id="form-login">
+          <div class="form login-form" id="form-login">
               <div class="message"></div>
               <label class="form__label">
                   <input type="text"  value="" required placeholder="Username" id="loginUsername"  class="form__input form__input--little form-control-login">
@@ -401,12 +401,12 @@
                   <input type="password" value="" required placeholder="Password" id="loginPassword"  class="form__input form__input--little form-control-password">
               </label>
               <div class="btn-wrap form-login-btn--wrap">
-                  <button type="submit" class="btn btn-little loginButton" for="form-login">login
+                  <button class="btn btn-little loginButton">login
                   </button>
                   <a href="#form-account-sing" class="btn btn-little modal-window">sign in?
                   </a>
               </div>
-          </form>
+            </div>
           <a href="#" class="form-account__subtitle form-sing__link">lost your password?</a>
 
       </div>
@@ -417,7 +417,7 @@
           <p class="form-account__subtitle">Come and join our cool and amazing community, fill in your details to get started. Already have an account?
               <span><a href="#form-account-login" class="form-sing__link modal-window">Log in.</a></span>
           </p>
-          <form action="#" class="form register-form" id="form-sing">
+          <div class="form register-form" id="form-sing">
               <div class="message"></div>
               <label class="form__label">
                   <input type="text" value="" required placeholder="User name" id="newUsername"  class="form__input form__input--little  form-control-login">
@@ -439,7 +439,7 @@
                   <button  class="btn btn-little registerButton" >Sign up for free
                   </button>
               </div>
-          </form>
+            </div>
           
       </div>
     </div>
