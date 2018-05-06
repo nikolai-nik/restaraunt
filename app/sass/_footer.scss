@@ -1,0 +1,132 @@
+.footer {
+    width: 100%;
+    position: relative;
+}
+
+.footer--wrap {
+    @include row-flex();
+    margin: 0 -15px;
+    @include md-block() {
+        margin-bottom: 30px;
+    }
+}
+.footer__contact {
+    @include col();
+    @include size(6);
+    display: flex;
+    flex-flow: column nowrap;
+    padding-top: 100px;
+    @include md-block() {
+        @include size(8);
+        padding: 0;
+    }
+    @include sm-block() {
+        @include size(12);
+        
+    }
+}
+
+.contact-list {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 40px;
+}
+.contact__item {
+    display: flex;
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+.contact__icons {
+    font-size: 14px;
+    line-height: 16px;
+    color: #000;
+    margin-right: 10px;
+}
+.contact__info {
+    font-size: 10px;
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    &:after,
+	&:before {
+		content: '';
+		position: absolute;
+		height: 1px;
+		background: #333;
+		width: 0;
+		top: 50%;
+		transition: width .4s ease;
+	}
+	
+	&:before {
+		right: 50%;
+	}
+	&:after {
+		left: 50%;
+	}
+	&:hover::before,
+	&:hover::after {
+		width: 50%;
+	}
+}
+
+.contact__info--pfone:not(:last-child) {
+    margin-right: 20px;
+
+}
+.subtitle--footer {
+    margin-bottom: 20px;
+}
+.description--footer {
+    margin-bottom: 10px;
+}
+.form-subscribe {
+    display: flex;
+    @include xs-block() {
+        flex-flow: column nowrap;
+        
+    }
+}
+.form-subscribe--label {
+    margin-left: 0;
+    @include xs-block() {
+       padding-bottom: 20px;
+       margin: 0;
+       width: 100%;
+        
+    }
+}
+.form-subscribe--input {
+    margin: 0;
+}
+
+.footer__copyright {
+    padding-top: 40px;
+    margin:auto 0 40px 0;
+    
+}
+.footer__map {
+    position: absolute;
+    width: calc(50% - 50px);
+    margin-left: 50px;
+    top: 0;
+    right: 0;
+    @include md-block() {
+        position: relative;
+        width: 100%;
+        margin: 0;
+    }
+
+}
+#map {
+    width: 100%;
+    height: 600px;
+    @include md-block() {
+        height: 300px;
+    }
+}
+
+
+
+

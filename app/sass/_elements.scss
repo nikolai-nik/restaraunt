@@ -1,0 +1,281 @@
+////section wrapp////
+.section-wrap {
+	margin: 0 -15px;
+}
+///info-box////
+.box-info {
+	@include col();
+	@include size(5);
+	display: flex;
+	flex-flow: column nowrap; 
+	justify-content: center;
+	
+}
+.box-info--center {
+	@include size(8);
+	text-align: center;
+	padding-bottom: 40px;
+	@include md-block() {
+		@include size(10);
+	}
+	@include xs-block() {
+		@include size(12);
+	}
+}
+.box-info--abs {
+	position: absolute;
+	width: calc( 50% - 30px);
+	padding-right: 30px;
+	@include md-block() {
+	  position: relative;
+	  @include col();
+	  @include size(12);
+	  text-align: center;
+	  padding: 0;
+	  margin-bottom: 30px;
+	}
+}
+.title {
+	font-family: 'Merriweather';
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 62px;
+	text-transform: capitalize;
+	color: #333;
+	margin-bottom: 40px;
+	position: relative;
+	overflow: hidden;
+	@include lg-block(){
+		font-size: 36px;
+		line-height: 50px;
+	}
+	@include md-block(){
+		font-size: 30px;
+		line-height: 40px;
+		margin-bottom: 20px;
+	}
+}
+.line {
+	content: '';
+	height: 2px;
+	background: #333;
+ 	position: relative;
+ 	left: 0;
+ 	width: 60px;
+ 	margin-right: 15px;
+	display: inline-block;
+	vertical-align: middle;
+	@include md-block(){
+		width: 30px;
+	}
+}
+
+.subtitle {
+	font-family: 'Muli';
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 20px;
+	color: #333;
+	margin-bottom: 20px;
+	@include md-block(){
+		margin-bottom: 10px;
+	}
+}
+.description {
+	font-family: 'Muli';
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 20px;
+	color:#8F8F8F;
+	
+}
+.description-prise {
+	display: flex;
+	justify-content: space-between;
+}
+.description--apostrophe {
+	padding:20px 20px 20px 80px;
+	position: relative;
+	max-height: 200px;
+	overflow-y: scroll;
+	&:before {
+		content: '\201C';
+		position: absolute;
+		top:0;
+		left: 0;
+		font-family: 'Merriweather';
+		font-size: 100px;
+		font-weight: 700;
+		line-height: 110px;
+		z-index: 1;
+		@include md-block(){
+			font-size: 65px;
+			line-height: 80px;
+		}
+	}
+	@include md-block(){
+		padding-left: 50px;
+	}
+}
+.price {
+	font-family: 'Muli';
+	font-weight: 700;
+	font-size: 30px;
+	color: #333;
+	@include md-block(){
+		font-size: 20px;
+	}
+}
+///info-box////
+
+.module-item {
+	text-align: center;
+	span {
+		font-size: 50px;
+		margin-bottom: 20px;
+	}
+}
+
+//button///
+.btn {
+	font-family: 'Muli';
+	font-weight: 800;
+	font-size: 14px;
+	line-height: 20px;
+	color:#333;
+	text-transform: uppercase;
+	padding: 15px 30px;
+	background: inherit;
+	border: none;
+	transition: all .3s ease;
+	position: relative;
+	cursor: pointer;
+	text-decoration: none;
+	z-index: 1;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 3px;
+		height: 100%;
+		background: #333;
+		transition: width .5s ease;
+
+	}
+	&:hover {
+		color: #fff;
+	}
+	&:focus {
+		outline: none;
+	}
+	@include sm-block(){
+		padding: 10px;
+		&:before {
+			width: 2px;
+		}
+	}
+}
+.btn:hover::before {
+	width: 100%;
+	z-index: -1;
+}
+.btn--right {
+	align-self: flex-end;
+}
+.btn--center {
+	align-self: center;
+}
+.btn-little {
+	padding: 10px;
+	@include sm-block(){
+		
+		&:before {
+			width: 2px;
+		}
+	}
+}
+//button///
+
+
+///class active menu///
+.toggle-wrap{
+	position: relative;
+}
+.toggle_cont {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 230px;
+	display: none;
+	z-index: 100;
+	text-align: left;
+	transform: translateX(-50%);
+}
+///class active menu///
+
+
+////slider navigation//////
+.prev,
+.next {
+	width: 50px;
+	height: 50px;
+	background: #333;
+	font-size: 18px;
+	border: none;
+	cursor: pointer;
+	transition: all .3s ease;
+	outline: none;
+	i {
+		color: #F7F7F7;
+
+	}
+	&:hover {
+		background: #fff;
+		border: 1px solid #333;
+		i {
+			color: #333;
+	
+		}
+	}
+	
+	@include sm-block(){
+		width: 30px;
+		height: 30px;
+	}
+}
+.prev {
+	margin-right: 10px;
+}
+////slider navigation//////
+
+
+.bottom_top {
+	.ui-to-top {
+		width: 50px;
+		height: 50px;
+		text-decoration: none;
+		font-size: 18px;
+		line-height: 45px;
+		background: #333;
+		color: white;
+		position: fixed;
+		bottom: 65px;
+		overflow: hidden;
+		text-align: center;
+		list-style: none;
+		z-index: 20;
+		transition: all .3s ease;
+		outline: none;
+	}
+	.ui-to-top:hover {
+		color: #333;
+		background: white;
+		border: 1px solid #333;
+	}
+	.ui-to-top:active {
+		color: #333;
+		background: white;
+		border: 1px solid #333;
+	}
+}

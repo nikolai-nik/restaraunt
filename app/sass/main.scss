@@ -1,0 +1,60 @@
+@import "app/sass/smart-grid";
+
+body {
+	@include reset();
+}
+
+@import "../../node_modules/normalize.css/normalize";
+
+@import "_adjustment";
+@import "_header";
+@import "_modal-popup";
+@import "_elements";
+@import "_main-section-top";
+@import "_section-our";
+@import "_section-see-menu";
+@import "_section-filter-category";
+@import "_section-reservation";
+@import "_section-today";
+@import "_section-visitors";
+@import "_section-partners";
+@import "_footer";
+
+
+$font_family: 'Montserrat', 'Muli', 'Raleway', sans-serif , 'FontAwesome';
+
+
+* ,
+*:before ,
+*:after {
+	box-sizing: border-box;
+}
+body {
+	font: 16px/18px $font_family;
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	background: #fff;
+}
+.wrapper {
+	width: 100vw;
+	display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+	margin:40px 0 0 0;
+}
+section {
+	margin-bottom: 100px;
+	@include md-block() {
+		margin-bottom: 50px;
+	}
+}
+.container {
+    @include wrapper();
+}
+.main {
+	width: 100%;
+	flex: 1 0 auto;
+	display: flex;
+	flex-flow: column nowrap;
+}

@@ -1,0 +1,26 @@
+{
+    "products": [
+        { "cardTitle": "hot grilled chicken breast", "cardUrl": "#", "cardImgPath": "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/Rectangle-5.jpg?alt=media&token=613d0af7-e14e-41f1-97aa-60d01cf9bcf0", "cardPrice": "$35", "cardData": "starters"},
+		{ "cardTitle": "1800 Hand Shaken Margarita", "cardUrl": "#", "cardImgPath": "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/Rectangle-1.jpg?alt=media&token=fba16139-1021-4908-9add-fa6daa0c0026", "cardPrice": "$30", "cardData": "starters"},
+		{ "cardTitle": "Angel Hair Pasta With Veal", "cardUrl": "#", "cardImgPath": "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/Rectangle-3.jpg?alt=media&token=d15b67b2-ea46-4f50-98d8-ea698eecaa25", "cardPrice": "$25", "cardData": "starters"},
+		{ "cardTitle": "Tomato Cream-Soup", "cardUrl": "#", "cardImgPath": "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/Rectangle-5.jpg", "cardPrice": "$15", "cardData": "starters"},
+		{ "cardTitle": "Poco Taco Salad & Tortilla Soup", "cardUrl": "#", "cardImgPath": "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/Rectangle-4.jpg?alt=media&token=09c7d893-aaca-43f8-bb63-abc3eab7d10c", "cardPrice": "$40", "cardData": "starters"},
+        { "cardTitle": "breakfast2", "cardUrl": "#", "cardImgPath": "gs://indigo-codex-180809.appspot.com/helena-yankovska-405527-unsplash.jpg", "cardPrice": "$10", "cardData": "breakfast"},
+		{ "cardTitle": "breakfast3", "cardUrl": "#", "cardImgPath": "gs://indigo-codex-180809.appspot.com/monika-grabkowska-317239-unsplash.jpg", "cardPrice": "$5", "cardData": "breakfast"},
+		{ "cardTitle": "Tomato Cream-Soup", "cardUrl": "#", "cardImgPath": "gs://indigo-codex-180809.appspot.com/slide3.jpg", "cardPrice": "$25", "cardData": "main"},
+		{ "cardTitle": "Poco Taco Salad & Tortilla Soup", "cardUrl": "#", "cardImgPath": "gs://indigo-codex-180809.appspot.com/slide1.jpg", "cardPrice": "$175", "cardData": "main"},
+        { "cardTitle": "lunches", "cardUrl": "#", "cardImgPath": "gs://indigo-codex-180809.appspot.com/Rectangle.jpg", "cardPrice": "13", "cardData": "lunches"},
+		{ "cardTitle": "lunches", "cardUrl": "#", "cardImgPath": "gs://indigo-codex-180809.appspot.com/Rectangle-13.jpg", "cardPrice": "$10", "cardData": "lunches"},
+		{ "cardTitle": "desert", "cardUrl": "#", "cardImgPath": "gs://indigo-codex-180809.appspot.com/desert.jpg", "cardPrice": "13", "cardData": "desert"},
+		{ "cardTitle": "desert", "cardUrl": "#", "cardImgPath": "gs://indigo-codex-180809.appspot.com/desert2.jpg", "cardPrice": "$10", "cardData": "desert"},
+		{ "cardTitle": "daily-menu", "cardUrl": "#", "cardImgPath": "gs://indigo-codex-180809.appspot.com/brooke-lark-250695-unsplash.jpg", "cardPrice": "13", "cardData": "daily-menu"},
+		{ "cardTitle": "daily-menu", "cardUrl": "#", "cardImgPath": "gs://indigo-codex-180809.appspot.com/brooke-lark-unsplash.jpg", "cardPrice": "$10", "cardData": "daily-menu"},
+		{ "cardTitle": "daily-menu", "cardUrl": "#", "cardImgPath": "gs://indigo-codex-180809.appspot.com/chris-ralston-484574-unsplash.jpg", "cardPrice": "13", "cardData": "daily-menu"},
+		{ "cardTitle": "chefs-speciality", "cardUrl": "#", "cardImgPath": "gs://indigo-codex-180809.appspot.com/Depositphotos_184291218_original.jpg", "cardPrice": "$10", "cardData": "chefs-speciality"},
+		{ "cardTitle": "chefs-speciality", "cardUrl": "#", "cardImgPath": "gs://indigo-codex-180809.appspot.com/pear-shaped-tart.jpg", "cardPrice": "13", "cardData": "chefs-speciality"},
+		{ "cardTitle": "chefs-speciality", "cardUrl": "#", "cardImgPath": "gs://indigo-codex-180809.appspot.com/Lemongrass-Basil-Spritzer.jpg", "cardPrice": "$10", "cardData": "chefs-speciality"},
+		{ "cardTitle": "offers", "cardUrl": "#", "cardImgPath": "gs://indigo-codex-180809.appspot.com/natural-chef-carolyn-nicholas-560111-unsplash.jpg", "cardPrice": "$10", "cardData": "offers"},
+		{ "cardTitle": "offers", "cardUrl": "#", "cardImgPath": "gs://indigo-codex-180809.appspot.com/angello-lopez-unsplash.jpg", "cardPrice": "13", "cardData": "offers"},
+        { "cardTitle": "offers", "cardUrl": "#", "cardImgPath": "gs://indigo-codex-180809.appspot.com/lauren-lester-205921-unsplash.jpg", "cardPrice": "$10", "cardData": "offers"}
+    ]
+}

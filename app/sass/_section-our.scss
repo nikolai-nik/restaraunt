@@ -1,0 +1,32 @@
+.section-our--wrap {
+	
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+}
+
+ 
+///cart module////
+.list-module {
+	@include row-flex();
+	.subtitle {
+		margin-top: 40px;
+	}
+}
+.module-item {
+	@include col();
+	@include size(4);
+
+	@include sm-block() {
+		@include size(12);
+		padding: 0 30px;
+		
+	}
+}
+.module-item:not(:last-child) {
+	@include sm-block() { 
+		margin-bottom: 20px;
+	}
+}
+///cart module////

@@ -1,0 +1,33 @@
+{
+  "name": "css-smart-grid",
+  "version": "5.1.6",
+  "homepage": "http://css.gd/",
+  "authors": [
+    "Daniel Ryan <dryan@dryan.com>"
+  ],
+  "description": "Lightweight, Responsive, Mobile First Grid System",
+  "main": "sass/smart-grid.scss",
+  "keywords": [
+    "sass",
+    "css",
+    "grid"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "5.1.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "5.1.6",
+    "commit": "2412eb78cfb300fea281be4a9c6721654994c4a4"
+  },
+  "_source": "https://github.com/dryan/css-smart-grid.git",
+  "_target": "^5.1.6",
+  "_originalSource": "css-smart-grid",
+  "_direct": true
+}

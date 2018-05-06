@@ -1,0 +1,108 @@
+.section-reservation {
+	width: 100%;
+}
+.reservation--wrap {
+	@include row-flex();
+	@include sm-block() {
+		flex-flow: column nowrap;
+	}
+}
+ 
+///reservation img///
+.reservation-image {
+	@include col();
+	@include size(4);
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transform: scaleY(1.1);
+		@include sm-block() {
+			transform: scaleY(1);
+		}
+	}
+	@include sm-block() {
+		@include size(8);
+		
+	}
+}
+///reservation img///
+
+
+.reservation__box {
+	@include col();
+	@include size(8);
+	display: flex;
+	flex-flow: column nowrap;
+	@include sm-block() {
+		@include size(10);
+		align-self: flex-end;
+	}
+}
+.reservation--info {
+	@include col();
+	@include size(9);
+	align-self: flex-end;
+	margin-bottom: 20px;
+	@include sm-block() { 
+		@include size(12);
+	}
+}
+///reservation form///
+.reservation__form {
+	@include row-flex();
+	@include sm-block() { 
+		flex-flow: column nowrap;
+	}
+}
+.reservation__form--margin {
+	margin: 0 -15px;
+}
+.reservation__form-wrap {
+	@include col();
+	@include size(6);
+
+	display: flex;
+	flex-flow: column nowrap;
+
+
+	@include sm-block() { 
+		@include size(12);
+	}
+}
+.reservation__label {
+	font-family: 'Muli';
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 10px;
+	line-height: 12px;
+	color: #333;
+	margin-bottom: 5px;
+}
+.reservation__input:not(:last-child) {
+	margin-bottom: 20px;
+}
+.reservation__input {
+	border: none;
+	outline: none;
+	padding: 15px;
+	border: 1px solid #333;
+
+	@include sm-block() { 
+		padding: 10px;
+		margin-bottom: 20px;
+	}
+}
+
+.reservation__input::placeholder{
+	font-family: 'Muli';
+	font-weight: 300;
+	font-size: 12px;
+	text-transform: capitalize;
+	color: #8F8F8F;
+
+}
+.btn-wrap {
+	margin-top: auto;
+}
+///reservation form///

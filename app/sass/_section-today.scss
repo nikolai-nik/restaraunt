@@ -1,0 +1,26 @@
+.section-today--wrap {
+    @include row-flex();
+  
+    @include sm-block(){
+		flex-flow: column nowrap;
+	}
+}
+.today-info {
+    @include col();
+    @include size(6);
+    display: flex;
+    align-items: center;
+    @include sm-block(){
+        @include size(10);
+        order:2;
+        align-self: flex-end;
+	}
+}
+.today-img {
+    @include col();
+    @include size(6);
+    @include sm-block(){
+        @include size(8);
+        order:1;
+	}
+} 

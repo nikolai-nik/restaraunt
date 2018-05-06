@@ -1,0 +1,158 @@
+.nav {
+	@include col();
+	@include size(9);
+	// padding:0 50px 0 170px;
+	transition: transform .2s ease-in-out;
+	display: flex;
+	height: 100%;
+	position: relative;
+	@include sm-block() {
+		
+        position: fixed;
+        left: 0;
+		top: 0;
+		width: 230px;
+		height: 100vh;
+		margin: 0;
+		padding:0 10px;
+		background: #fff;
+		z-index: 100;
+		transform: translateX(-100%);
+		
+	}
+	
+}
+.nav--active {
+	
+    @include sm-block() {
+		transform: translateX(0);
+		background:rgba(247,247,247,1);
+    }
+}
+
+.nav__list  {
+	@include row-flex();
+	justify-content: flex-end;
+	width: 100%;
+	@include sm-block() {
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+	}
+}
+.nav__item {
+	text-transform: uppercase;
+	margin-right: 30px;
+	
+	@include sm-block() {
+		margin: 0;
+	}
+}
+
+
+.nav__link,
+.submenu__link {
+	display: inline-block;
+	padding: 30px 0;
+	text-decoration: none;
+	color: #333;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 18px;
+	transition: all 3s ease;
+	position: relative;
+	// &:hover {
+	// 	text-decoration: line-through;
+		
+	// }
+	&:after,
+	&:before {
+		content: '';
+		position: absolute;
+		height: 2px;
+		background: #333;
+		width: 0;
+		top: 50%;
+		transition: width .4s ease;
+	}
+	
+	&:before {
+		right: 50%;
+	}
+	&:after {
+		left: 50%;
+	}
+	&:hover::before,
+	&:hover::after {
+		width: 50%;
+	}
+	
+	
+	@include md-block() {
+		font-size: 12px;
+	}
+}
+
+.nav__link--sub {
+	position: relative;
+	margin-right: 20px;
+	span {
+		position: absolute;
+		right: -20px;
+		top: 50%;
+		transform: translateY(-50%);
+		margin-left: 5px;	
+	}
+}
+.active.nav__link::before,
+.active.nav__link::after {
+	width: 50%;
+}
+	
+
+.active.nav__link > span:before {
+	content: '\ec39 ';
+	
+}
+.submenu-list {
+	padding: 15px;
+	background: #333;
+	@include sm-block() {
+		left: 0;
+		width: 100%;
+		transform: translateX(0);
+	}
+}
+
+.submenu__link {
+	display: inline-block;
+	text-decoration: none;
+	padding: 5px 0;
+	color: #fff;
+	&:after,
+	&:before{
+		background: #fff;
+	}
+}
+.menu-btn {
+	@include col();
+	@include size(9);
+    padding: 15px;
+    background: none;
+    border: none;
+    outline: none;
+	font-size: 16px;
+	display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    display: none;
+	
+	color: #333;
+	
+	cursor: pointer;
+    @include sm-block() {
+		display: flex;
+		color: #333;
+		@include size(6);
+	}
+	
+}

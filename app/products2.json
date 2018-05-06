@@ -1,0 +1,138 @@
+
+    [
+       {
+      "cardData" : "starters",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/Rectangle-5.jpg?alt=media&token=23ca0fd7-2663-455f-80d2-a58d37f5b7f4",
+      "cardPrice" : "$35",
+      "cardTitle" : "hot grilled chicken breast",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "starters",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/Rectangle-1.jpg?alt=media&token=9337ad55-2050-4012-86b3-858fb500f7c8",
+      "cardPrice" : "$30",
+      "cardTitle" : "1800 Hand Shaken Margarita",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "starters",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/Rectangle-3.jpg?alt=media&token=15fafca3-24dd-4da4-ad6c-85a4e3d1df7c",
+      "cardPrice" : "$25",
+      "cardTitle" : "Angel Hair Pasta With Veal",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "starters",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/Cream-Soup.jpg?alt=media&token=359a4c40-6665-4e47-b7bf-056f538cb03e",
+      "cardPrice" : "$15",
+      "cardTitle" : "Tomato Cream-Soup",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "starters",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/Rectangle-4.jpg?alt=media&token=26ea423e-c1a0-4bc5-80f2-b8f323e032dc",
+      "cardPrice" : "$40",
+      "cardTitle" : "Poco Taco Salad & Tortilla Soup",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "breakfast",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/helena-yankovska-405527-unsplash.jpg?alt=media&token=bff57ac0-4fef-4699-a026-bc6aabdbddaa",
+      "cardPrice" : "$10",
+      "cardTitle" : "breakfast2",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "breakfast",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/monika-grabkowska-317239-unsplash.jpg?alt=media&token=0eba81aa-a1ed-4d30-9eaf-c9057b4db47e",
+      "cardPrice" : "$5",
+      "cardTitle" : "breakfast3",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "main",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/slide3.jpg?alt=media&token=18451e4e-17a6-4c4a-b057-e8efa1af1531",
+      "cardPrice" : "$25",
+      "cardTitle" : "Tomato Cream-Soup",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "main",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/slide1.jpg?alt=media&token=57263721-b9cd-4cca-8f50-492473df0769",
+      "cardPrice" : "$175",
+      "cardTitle" : "Poco Taco Salad & Tortilla Soup",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "lunches",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/Rectangle.jpg?alt=media&token=aab17878-9108-4ffe-bbe7-eef5fea0fd58",
+      "cardPrice" : "13",
+      "cardTitle" : "lunches",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "lunches",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/Rectangle-13.jpg?alt=media&token=29232838-5bb0-4b77-a46d-5757d82e39d2",
+      "cardPrice" : "$10",
+      "cardTitle" : "lunches",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "desert",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/desert.jpg?alt=media&token=1fb7db57-92a7-4773-bce7-1fe76f0797a4",
+      "cardPrice" : "13",
+      "cardTitle" : "desert",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "desert",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/desert2.jpg?alt=media&token=7bb4d492-d8ad-4392-afca-235d7fb6e4dc",
+      "cardPrice" : "$10",
+      "cardTitle" : "desert",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "daily-menu",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/brooke-lark-250695-unsplash.jpg?alt=media&token=24d6a770-af66-4fe9-83af-aaa1a3d7439c",
+      "cardPrice" : "13",
+      "cardTitle" : "daily-menu",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "daily-menu",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/brooke-lark-unsplash.jpg?alt=media&token=8f00eb21-b5a7-45ff-a95f-26289c85b20c",
+      "cardPrice" : "$10",
+      "cardTitle" : "daily-menu",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "daily-menu",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/chris-ralston-484574-unsplash.jpg?alt=media&token=1c56c3e3-7d36-4586-a81a-648562f195c0",
+      "cardPrice" : "13",
+      "cardTitle" : "daily-menu",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "chefs-speciality",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/Depositphotos_184291218_original.jpg?alt=media&token=9d7eb101-7d8a-4a1f-901d-b641d3baab08",
+      "cardPrice" : "$10",
+      "cardTitle" : "chefs-speciality",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "chefs-speciality",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/pear-shaped-tart.jpg?alt=media&token=606eceb2-78f5-453f-80a3-0e5a9e8a157a",
+      "cardPrice" : "13",
+      "cardTitle" : "chefs-speciality",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "chefs-speciality",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/Lemongrass-Basil-Spritzer.jpg?alt=media&token=3fa89726-c6fb-4f21-870c-079be669718a",
+      "cardPrice" : "$10",
+      "cardTitle" : "chefs-speciality",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "offers",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/natural-chef-carolyn-nicholas-560111-unsplash.jpg?alt=media&token=7aac5c06-29c1-448f-9b7c-c632382df7ac",
+      "cardPrice" : "$10",
+      "cardTitle" : "offers",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "offers",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/angello-lopez-unsplash.jpg?alt=media&token=331ed700-68ca-47c0-b6c4-962196f60822",
+      "cardPrice" : "13",
+      "cardTitle" : "offers",
+      "cardUrl" : "#"
+    }, {
+      "cardData" : "offers",
+      "cardImgPath" : "https://firebasestorage.googleapis.com/v0/b/indigo-codex-180809.appspot.com/o/lauren-lester-205921-unsplash.jpg?alt=media&token=83d280c3-79ac-4340-bd40-16f2b8ef38da",
+      "cardPrice" : "$10",
+      "cardTitle" : "offers",
+      "cardUrl" : "#"
+    }
+]
+ 
+  
