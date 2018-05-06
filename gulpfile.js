@@ -111,18 +111,18 @@ gulp.task('img', function() {
         .pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
 });
 
-gulp.task('build', ['clean', 'sass', 'css-main', 'scripts'], function() {
+gulp.task('build', ['clean', 'sass', 'css-main', 'scripts','img'], function() {
 
     var buildCss = gulp.src([ // Переносим библиотеки в продакшен
         'app/css/main.css',
         'app/css/main.min.css',
         'app/css/libs.min.css',
-        'app/css/font.css',
-        'app/css/font-awesome.css',
-        'app/css/lineicons.css',
+        'app/css/linearicons.css',
         'app/css/normalize.css',
         ])
     .pipe(gulp.dest('dist/css'))
+    var buildViews = gulp.src('app/views/**/*') // Переносим шрифты в продакшен
+    .pipe(gulp.dest('dist/views'))
 
     var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
     .pipe(gulp.dest('dist/fonts'))

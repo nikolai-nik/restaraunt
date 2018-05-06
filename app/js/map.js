@@ -167,6 +167,6 @@ function initMap() {
     var marker = new google.maps.Marker({
       position: positionMap,
       map: map,
-      icon: "../img/marker.png"
+      icon: "./img/marker.png"
     });
   }
