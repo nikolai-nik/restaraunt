@@ -864,6 +864,9 @@ template {
   -webkit-transition: width .4s ease;
   -o-transition: width .4s ease;
   transition: width .4s ease;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .nav__link:before,
@@ -2541,9 +2544,7 @@ section {
     width: calc(50% - 30px);
   }
 
-  .header {
-    padding-bottom: 20px;
-  }
+  
 
   .logo {
     width: -webkit-calc(33.33333% - 30px);

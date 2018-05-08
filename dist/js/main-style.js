@@ -1,13 +1,15 @@
+'use strict';
+
 var restarauntSiteScripts;
 
-(function($){
+(function ($) {
 
 	restarauntSiteScripts = {
 
-		init: function(){
+		init: function init() {
 			var _this = this;
 
-			$( document ).ready( function() {
+			$(document).ready(function () {
 
 				_this.magnificInit();
 				_this.slidersInit();
@@ -18,19 +20,18 @@ var restarauntSiteScripts;
 				_this.filterProducts();
 				_this.toTopInit();
 				_this.extraFeaturesInit();
-			} );
-
+			});
 		},
 
-		magnificInit: function( target ){
-			$( '.modal-window' ).magnificPopup({
+		magnificInit: function magnificInit(target) {
+			$('.modal-window').magnificPopup({
 				type: 'inline'
 			});
 		},
 
-		slidersInit: function() {
-			let slider = $('.slider');
-				slider.css('height',slider.width());
+		slidersInit: function slidersInit() {
+			var slider = $('.slider');
+			slider.css('height', slider.width());
 
 			$('.slider').slick({
 				appendArrows: $('.slider-top .arrows'),
@@ -48,8 +49,8 @@ var restarauntSiteScripts;
 			////////////////////
 		},
 
-		fixedMenuInit: function() {
-			let header = $('.header');
+		fixedMenuInit: function fixedMenuInit() {
+			var header = $('.header');
 
 			$(window).scroll(function () {
 				if ($(this).scrollTop() > 40) {
@@ -60,10 +61,10 @@ var restarauntSiteScripts;
 			});
 		},
 
-		responsiveNavInit: function () {
-			let btn = $('#menu-btn');
-			let nav = $('nav');
-			let overlay = $('.overlay');
+		responsiveNavInit: function responsiveNavInit() {
+			var btn = $('#menu-btn');
+			var nav = $('nav');
+			var overlay = $('.overlay');
 
 			btn.on('click', function () {
 				nav.addClass('nav--active');
@@ -79,21 +80,21 @@ var restarauntSiteScripts;
 				$('body').removeClass('body-fixed');
 
 				btn.removeAttr('disabled');
-			})
+			});
 		},
 
-		menuToggleInit: function() {
+		menuToggleInit: function menuToggleInit() {
 			var o = $('.toggle');
 
 			$('.toggle').click(function (e) {
 				e.preventDefault();
 				var tmp = $(this);
 				o.each(function () {
-				if ($(this).hasClass('active') && !$(this).is(tmp)) {
-					$(this).parent().find('.toggle_cont').slideToggle();
-					$(this).removeClass('active');
-				}
-			});
+					if ($(this).hasClass('active') && !$(this).is(tmp)) {
+						$(this).parent().find('.toggle_cont').slideToggle();
+						$(this).removeClass('active');
+					}
+				});
 				$(this).toggleClass('active');
 				$(this).parent().find('.toggle_cont').slideToggle();
 			});
@@ -103,68 +104,66 @@ var restarauntSiteScripts;
 				var removeBtnWrap = $('#cart .btn-remove-wrap');
 				if (!container.is(e.target) && container.has(e.target).length === 0 && container.find('.toggle').hasClass('active')) {
 					container.find('.active').toggleClass('active').parent().find('.toggle_cont').slideToggle();
-					if (removeBtnWrap.length > 0 ) {
+					if (removeBtnWrap.length > 0) {
 						removeBtnWrap.fadeOut();
 					}
 				}
 			});
 		},
 
-		loginFormInit: function(){
+		loginFormInit: function loginFormInit() {
 
-			let _this = this,
-				allUsersData = {},
-				$loginForm = $('.login-form'),
-				$registerForm = $('.register-form'),
-				$message = $('.message'),
-				messageTimeOut,
-				jsonUrl = 'https://loginform-11c2d.firebaseio.com/users.json';
+			var _this = this,
+			    allUsersData = {},
+			    $loginForm = $('.login-form'),
+			    $registerForm = $('.register-form'),
+			    $message = $('.message'),
+			    messageTimeOut = void 0,
+			    jsonUrl = 'https://loginform-11c2d.firebaseio.com/users.json';
 
-				/////////// handler login form/////////
-			$('.loginButton', $loginForm ).on('click', function( event ) {
-				let userNameValue = $('#loginUsername', $loginForm).val(),
-					userPassValue = $('#loginPassword', $loginForm).val(),
-					inputs        = $( 'input', $loginForm ),
-					isError       = false;
+			/////////// handler login form/////////
+			$('.loginButton', $loginForm).on('click', function (event) {
+				var userNameValue = $('#loginUsername', $loginForm).val(),
+				    userPassValue = $('#loginPassword', $loginForm).val(),
+				    inputs = $('input', $loginForm),
+				    isError = false;
 
 				event.preventDefault();
 
-				inputs.each( function() {
-					let $this = $(this),
-						value = $this.val(),
-						$error = $this.siblings('.error');
+				inputs.each(function () {
+					var $this = $(this),
+					    value = $this.val(),
+					    $error = $this.siblings('.error');
 
 					if ($this.prop('required') && value == '') {
 						$error.addClass('showState');
 
 						isError = true;
 					}
+				});
 
-				} );
-
-				if ( isError ) {
+				if (isError) {
 					return false;
 				}
 
-				loginHandler( userNameValue, userPassValue );
+				loginHandler(userNameValue, userPassValue);
 			});
 
-
-				///////////handler register form/////////
-			$('.registerButton', $registerForm).on('click', function() {
-				let nameValue = $('#newUsername', $registerForm).val(),
-					loginValue = $('#newUserlogin', $registerForm).val(),
-					passValue = $('#newPassword', $registerForm).val(),
-					confirmPassValue = $('#comfirmPassword', $registerForm).val(),
-					inputs = $('input', $registerForm),
-					isError = false;
+			///////////handler register form/////////
+			$('.registerButton', $registerForm).on('click', function () {
+				var nameValue = $('#newUsername', $registerForm).val(),
+				    loginValue = $('#newUserlogin', $registerForm).val(),
+				    passValue = $('#newPassword', $registerForm).val(),
+				    confirmPassValue = $('#comfirmPassword', $registerForm).val(),
+				    inputs = $('input', $registerForm),
+				    isError = false;
 
 				event.preventDefault();
 
-				inputs.each( function() {
-					let $this = $(this),
-						value = $this.val(),
-						$error = $this.siblings('.error');
+				inputs.each(function () {
+					var $this = $(this),
+					    value = $this.val(),
+					    $error = $this.siblings('.error');
 
 					if ($this.prop('required') && value == '') {
 						$error.addClass('showState');
@@ -173,8 +172,7 @@ var restarauntSiteScripts;
 					} else {
 						$error.removeClass('showState');
 					}
-
-				} );
+				});
 
 				if (passValue !== confirmPassValue) {
 					showMessage('Passwords do not match');
@@ -182,84 +180,83 @@ var restarauntSiteScripts;
 					return false;
 				}
 
-				if ( isError ) {
+				if (isError) {
 					return false;
 				}
 
 				registerHandler(nameValue, loginValue, passValue);
 			});
-				///////////handler register form/////////
+			///////////handler register form/////////
 
-			$('.form-instance').on('input', 'input', function() {
-				let $target = $(event.target),
-					$error = $target.siblings('.error');
+			$('.form-instance').on('input', 'input', function () {
+				var $target = $(event.target),
+				    $error = $target.siblings('.error');
 
 				$error.removeClass('showState');
 			});
-				///////////function ajax inquiry database login form/////////
-			function loginHandler( login, pass ) {
-				let usersData = {},
-					isAccess = false;
+			///////////function ajax inquiry database login form/////////
+			function loginHandler(login, pass) {
+				var usersData = {},
+				    isAccess = false;
 
 				$.ajax({
 					type: 'GET',
 					url: jsonUrl,
-					success: function(responce) {
+					success: function success(responce) {
 						usersData = responce;
 
 						console.log(usersData);
 
-						for ( let id in usersData ) {
+						for (var id in usersData) {
 							// console.log(usersData[id]);
-							let itemData = usersData[ id ];
+							var itemData = usersData[id];
 
-							if ( itemData.login == login ) {
-								if ( itemData.pass == pass ) {
+							if (itemData.login == login) {
+								if (itemData.pass == pass) {
 									isAccess = true;
 								} else {
-									showMessage( 'Wrong Password' );
+									showMessage('Wrong Password');
 
 									return false;
 								}
 							}
 						}
 
-						if ( isAccess ) {
-							showMessage( 'Success! Redirect... '+ login +'' );
-							$('.login-form__link').css('color','white');
+						if (isAccess) {
+							showMessage('Success! Redirect... ' + login + '');
+							$('.login-form__link').css('color', 'white');
 							$('.custom-title').html(login).css('display', 'block');
 						} else {
-							showMessage( 'User with name <b>' + login + '</b> not exist!'  );
+							showMessage('User with name <b>' + login + '</b> not exist!');
 
 							return false;
 						}
 					}
 				});
-
 			}
-				///////////function ajax inquiry database login form/////////
+			///////////function ajax inquiry database login form/////////
 
-				///////////function ajax inquiry database register form/////////
+			///////////function ajax inquiry database register form/////////
 			function registerHandler(name, login, pass) {
-				let data = {
+				var data = {
 					name: name,
 					login: login,
 					pass: pass
-				}
+				};
 
 				$.ajax({
 					type: 'POST',
 					data: JSON.stringify(data),
 					url: jsonUrl,
-					success: function(responce) {
+					success: function success(responce) {
 
-						showMessage( 'New user with login <b>' + login + '</b> has been registered!' );
+						showMessage('New user with login <b>' + login + '</b> has been registered!');
 					}
 				});
 			}
-				///////////function ajax inquiry database register form/////////
+			///////////function ajax inquiry database register form/////////
 
-				///////////function showMessage form/////////
+			///////////function showMessage form/////////
 			function showMessage(text) {
 
 				$message.addClass('showState');
@@ -267,45 +264,43 @@ var restarauntSiteScripts;
 				_this.preloaderShow();
 				clearTimeout(messageTimeOut);
 
-				messageTimeOut = setTimeout(function() {
+				messageTimeOut = setTimeout(function () {
 					$message.removeClass('showState');
 					_this.preloaderHide();
 				}, 5000);
-
 			}
-		},//end Login form
+		}, //end Login form
 
-		filterProducts: function() {
-			const resultContainer = $('.result-tabs-list');
+		filterProducts: function filterProducts() {
+			var resultContainer = $('.result-tabs-list');
 
-			let _this          = this,
-				$filterList    = $('.tabs-filter-list__btn'),
-				jsonUrlProduct = 'https://indigo-codex-180809.firebaseio.com/products.json';
+			var _this = this,
+			    $filterList = $('.tabs-filter-list__btn'),
+			    jsonUrlProduct = 'https://indigo-codex-180809.firebaseio.com/products.json';
 
-			showData( 'starters' );
+			showData('starters');
 
-			$filterList.each( function(){
+			$filterList.each(function () {
 
-				let $this = $(this),
-					curentCategory = $this.data('category');
+				var $this = $(this),
+				    curentCategory = $this.data('category');
 
-				$this.on('click', function(e){
+				$this.on('click', function (e) {
 					e.preventDefault();
-					showData( curentCategory );
+					showData(curentCategory);
 				});
-
 			});
 
-			function showData( category ) {
-				let products = {};
+			function showData(category) {
+				var products = {};
 
 				_this.preloaderShow();
 
-				$filterList.each( function() {
-					let $this        = $( this ),
-						eachCategory = $this.data( 'category' );
+				$filterList.each(function () {
+					var $this = $(this),
+					    eachCategory = $this.data('category');
 
-					if ( eachCategory === category) {
+					if (eachCategory === category) {
 						$this.addClass('active');
 					} else {
 						$this.removeClass('active');
@@ -316,90 +311,85 @@ var restarauntSiteScripts;
 					type: 'GET',
 					url: jsonUrlProduct,
 					data: JSON.stringify(products),
-					success: function( products ) {
-						productsDB = products
-						let allContent = '';
+					success: function success(products) {
+						productsDB = products;
+						var allContent = '';
 
-						$.each( productsDB, function(i) {
+						$.each(productsDB, function (i) {
 
-							let cardData = productsDB[i]['cardData'];
-							let content = '';
+							var cardData = productsDB[i]['cardData'];
+							var content = '';
 
-							if ( cardData === category || category === 'all') {
+							if (cardData === category || category === 'all') {
 
-								let card = productsDB[i];
+								var card = productsDB[i];
 
 								content = nunjucks.render('./views/filter-category.njk', card);
 								allContent += content;
 
-								resultContainer.html(allContent)
+								resultContainer.html(allContent);
 								_this.preloaderHide();
 
 								////timeout animation show///////
-								$('.result-tabs__item').each(function(index) {
-									(function(that, i) {
-										let t = setTimeout(function() { $(that).css("right", 0); }, 300 * i);
+								$('.result-tabs__item').each(function (index) {
+									(function (that, i) {
+										var t = setTimeout(function () {
+											$(that).css("right", 0);
+										}, 300 * i);
 									})(this, index);
 								});
 
 								////timeout animation show///////
 							};
 						});
-
 					}
 				});
 			};
-		},// filterProducts
+		}, // filterProducts
 
-		toTopInit: function() {
-			let cont   = $('.container'),
-				coordUi = cont.width() + cont.offset().left,
-				UiTiTop = $('.ui-to-top');
+		toTopInit: function toTopInit() {
+			var cont = $('.container'),
+			    coordUi = cont.width() + cont.offset().left,
+			    UiTiTop = $('.ui-to-top');
 
-			$(window).scroll(function(){
+			$(window).scroll(function () {
 
-				if ( $( this ).scrollTop() > 100 ) {
+				if ($(this).scrollTop() > 100) {
 					UiTiTop.fadeIn();
 				} else {
 					UiTiTop.fadeOut();
 				}
 			});
 
-			UiTiTop.click(function(){
+			UiTiTop.click(function () {
 				$("html, body").animate({ scrollTop: 0 }, 600);
 
 				return false;
 			});
 			UiTiTop.css({
-				"left": (coordUi - UiTiTop.width() + 30)
+				"left": coordUi - UiTiTop.width() + 30
 			});
 		},
 
-		extraFeaturesInit: function() {
-			let pozLogo = $('.logo').offset();
-			let widthLogo = $('.logo').width();
+		extraFeaturesInit: function extraFeaturesInit() {
+			var pozLogo = $('.logo').offset();
+			var widthLogo = $('.logo').width();
 
-			$('.wrap-bg').css("width" ,$(window).width() - (pozLogo.left + (widthLogo / 3 * 2 )));
+			$('.wrap-bg').css("width", $(window).width() - (pozLogo.left + widthLogo / 3 * 2));
 		},
 
-		preloaderShow: function() {
-			let preloader = document.getElementById('preloader');
+		preloaderShow: function preloaderShow() {
+			var preloader = document.getElementById('preloader');
 
 			preloader.classList.add('preloader--active');
 		},
 
-		preloaderHide: function() {
-			let preloader = document.getElementById('preloader');
+		preloaderHide: function preloaderHide() {
+			var preloader = document.getElementById('preloader');
 
 			preloader.classList.remove('preloader--active');
 		}
-	}
 
-	//main scripts init
-	restarauntSiteScripts.init();
-
-})( jQuery );
-
-
-
-
+		//main scripts init
+	};restarauntSiteScripts.init();
+})(jQuery);

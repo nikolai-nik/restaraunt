@@ -18,6 +18,7 @@ var gulp       = require('gulp'), // Подключаем Gulp
     sourcemaps = require('gulp-sourcemaps'),
     gcmq = require('gulp-group-css-media-queries'),
     nunjucks = require('nunjucks'),
+    babel = require ('gulp-babel'),
     gulpSassError = require('gulp-sass-error');
     
 
@@ -49,6 +50,12 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
         },
         notify: false // Отключаем уведомления
     });
+});
+
+gulp.task('js', function () {
+	return gulp.src('app/js/main-style.js')
+		.pipe (babel ({presets: ['es2015']}))
+		.pipe(gulp.dest('dist/js'))
 });
 
 gulp.task('scripts', function() {
@@ -111,7 +118,7 @@ gulp.task('img', function() {
         .pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
 });
 
-gulp.task('build', ['clean', 'sass', 'css-main', 'scripts','img'], function() {
+gulp.task('build', ['clean', 'sass', 'css-main', 'scripts', 'js','img'], function() {
 
     var buildCss = gulp.src([ // Переносим библиотеки в продакшен
         'app/css/main.css',

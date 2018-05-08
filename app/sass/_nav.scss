@@ -60,10 +60,7 @@
 	line-height: 18px;
 	transition: all 3s ease;
 	position: relative;
-	// &:hover {
-	// 	text-decoration: line-through;
-		
-	// }
+	
 	&:after,
 	&:before {
 		content: '';
@@ -73,6 +70,7 @@
 		width: 0;
 		top: 50%;
 		transition: width .4s ease;
+		transform: translateY(-50%);
 	}
 	
 	&:before {
