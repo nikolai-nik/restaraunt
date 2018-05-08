@@ -317,7 +317,7 @@ var restarauntSiteScripts;
 					url: jsonUrlProduct,
 					data: JSON.stringify(products),
 					success: function( products ) {
-						productsDB = products
+						let productsDB = products
 						let allContent = '';
 
 						$.each( productsDB, function(i) {
